@@ -8,9 +8,8 @@
 
 <br>
 
-Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum amet cum, aut
-nostrum neque, id consequuntur! Alias quasi, debitis sint deserunt illum id
-veniam nesciunt laborum officia qui impedit iste?
+Subscribe to a remote logdown instance in the same machine. Works between
+different Node processes and browser tabs.
 
 ## Installation
 
@@ -32,7 +31,7 @@ cast.publish(debug)
 setInterval(() => debug.log('Hi', Date.now()), 1000)
 ```
 
-Then in another machine, process, browser, ...
+Then in another process, browser, ...
 
 ```js
 // Subscribe
