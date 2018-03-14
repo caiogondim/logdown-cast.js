@@ -1,0 +1,29 @@
+{
+  "name": "logdown-stream-to-browser",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "standard --fix './lib/*.js' './examples/*.js'",
+    "build:example": "browserify examples/browser.js > examples/bundle.js && echo '<html><body><script src=\"bundle.js\"></script></body></html>' > examples/index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/caiogondim/logdown-stream-to-browser.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/caiogondim/logdown-stream-to-browser/issues"
+  },
+  "homepage": "https://github.com/caiogondim/logdown-stream-to-browser#readme",
+  "dependencies": {
+    "localcast": "2.0.1"
+  },
+  "devDependencies": {
+    "browserify": "16.1.1",
+    "logdown": "3.2.3",
+    "standard": "11.0.0"
+  }
+}
