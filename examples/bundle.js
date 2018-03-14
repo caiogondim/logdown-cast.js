@@ -7,24 +7,30 @@ logdownCast.subscribe(debug)
 },{"../lib":2,"logdown":15}],2:[function(require,module,exports){
 const localcast = require('localcast')
 
-function publish(logdownInstance) {
+const methodNames = ['log', 'info', 'warn', 'error', 'debug']
+
+function publish (logdownInstance) {
   const cast = localcast(logdownInstance.opts.prefix)
 
-  const originalLog = logdownInstance.log.bind(logdownInstance)
-  logdownInstance.log = (...args) => {
-    cast.emit('msg', {
-      prefix: logdownInstance.opts.prefix,
-      args: args
-    })
-    originalLog(...args)
-  }
+  methodNames.forEach(methodName => {
+    const originalMethod = logdownInstance[methodName].bind(logdownInstance)
+    logdownInstance[methodName] = (...args) => {
+      cast.emit(methodName, {
+        prefix: logdownInstance.opts.prefix,
+        args: args
+      })
+      originalMethod(...args)
+    }
+  })
 }
 
-function subscribe(logdownInstance) {
+function subscribe (logdownInstance) {
   const cast = localcast(logdownInstance.opts.prefix)
 
-  cast.on('msg', data => {
-    logdownInstance.log(...data.args)
+  methodNames.forEach(methodName => {
+    cast.on(methodName, data => {
+      logdownInstance[methodName](...data.args)
+    })
   })
 }
 

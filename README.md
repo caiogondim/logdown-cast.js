@@ -45,6 +45,10 @@ cast.subscribe(logdown('foo'))
 The subscribed instance is a regular logdown instance, which means that you will
 need to [enable logging for it](https://github.com/caiogondim/logdown.js#enablingdisabling-instances).
 
+## Preview
+
+<img src="./preview.mov" />
+
 ## Reference and credits
 - Icon created by Jamison Wieser from The Noun Project
 - [logdown](https://github.com/caiogondim/logdown.js)
