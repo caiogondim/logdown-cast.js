@@ -47,7 +47,9 @@ need to [enable logging for it](https://github.com/caiogondim/logdown.js#enablin
 
 ## Preview
 
-<img src="./preview.mov" />
+<a href="https://www.youtube.com/watch?v=eIjWB-kV-uU&feature=youtu.be">
+  <img src="./preview.gif" />
+</a>
 
 ## Reference and credits
 - Icon created by Jamison Wieser from The Noun Project
