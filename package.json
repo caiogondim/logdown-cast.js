@@ -1,6 +1,6 @@
 {
   "name": "logdown-cast",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Subscribe to a remote logdown instance in the same machine. Works between different Node processes and browser tabs.",
   "main": "lib/index.js",
   "scripts": {
