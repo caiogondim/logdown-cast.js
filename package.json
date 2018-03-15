@@ -1,8 +1,8 @@
 {
-  "name": "logdown-stream-to-browser",
+  "name": "logdown-cast",
   "version": "1.0.1",
-  "description": "",
-  "main": "index.js",
+  "description": "Subscribe to a remote logdown instance in the same machine. Works between different Node processes and browser tabs.",
+  "main": "lib/index.js",
   "scripts": {
     "test": "standard --fix './lib/*.js' './examples/*.js'",
     "build:example": "browserify examples/browser.js > examples/bundle.js && echo '<html><body><script src=\"bundle.js\"></script></body></html>' > examples/index.html"
@@ -12,8 +12,8 @@
     "url": "git+https://github.com/caiogondim/logdown-stream-to-browser.git"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "author": "Caio Gondim",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/caiogondim/logdown-stream-to-browser/issues"
   },
